@@ -5,8 +5,96 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <div class="wrapper">
+      <div class="header">
+        <div class="header-logo">
+          <img src="img/logo.png" alt="">
+        </div>
+        <div class="header-menu">
+          <ul>
+            <li>Каталог</li>
+            <li>Доставка и оплата</li>
+            <li>О Компании</li>
+          </ul>
+        </div>
+        <div class="header-action">
+          <div class="header-action-search">
+            <a href="#">Поиск</a>
+            <div class="modal-form">
+              <input type="text" name="search" value="" placeholder="Что ищем?">
+            </div>
+          </div>
+          <div class="header-action-login">
+            <a href="#">Вход</a>
+            <div class="modal-form">
+              <form action="#" method="post">
+                <input type="text" name="email" value="" placeholder="Электронная почта">
+                <input type="password" name="password" value="" placeholder="Пароль">
+                <div class="form-action">
+                  <button class="btn" type="submit"></button>
+                  <p>
+                    <a href="#">Забыли пароль?</a>
+                  </p>
+                  <p>
+                    <a href="#">Новая регистрация</a>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="header-action-cart">
+            <a href="#">Пусто</a>
+            <div class="modal-form">
+              <table class="cart-table">
+                <tr>
+                  <td>
+                    x
+                  </td>
+                  <td>
+                    <img src="img/product1_10x10.jpg" alt="">
+                  </td>
+                  <td>
+                    Пломбир с апельсиновым джемом
+                  </td>
+                  <td>
+                    1,5 кг х <span class="cart-table-cost">200 руб.</span>
+                  </td>
+                  <td>
+                    300 руб.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    x
+                  </td>
+                  <td>
+                    <img src="img/product2_10x10.jpg" alt="">
+                  </td>
+                  <td>
+                    Клубничный пломбир с присыпкой из белого шоколада
+                  </td>
+                  <td>
+                    1,5 кг х <span class="cart-table-cost">300 руб.</span>
+                  </td>
+                  <td>
+                    450 руб.
+                  </td>
+                </tr>
+                <tr>
+                  <td class="cart-table-total-cost" colspan="5">
+                    Итого: 750 руб.
+                  </td>
+                </tr>
+              </table>
+              <a href="#" class="btn">Оформить заказ</a>
+            </div>
+          </div>
+        </div>
+        <div class="header-contact">
+          с 10 до 20 ежедневно<br>
+          <span class="header-contact-tel">8 812 450-25-25</span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
