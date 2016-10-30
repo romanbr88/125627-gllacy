@@ -3,18 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <div class="container">
         <div class="header-logo">
-          <img src="img/logo.png" alt="">
+          <img src="img/logo.svg" width="154" height="64" alt="GllacyShop">
         </div>
         <nav class="header-menu">
           <ul>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="#">Доставка и оплата</a></li>
-            <li><a href="#">О Компании</a></li>
+            <li>
+              <a href="catalog.html">Каталог</a>
+              <ul class="dropdown-menu">
+                <li class="main-point"><a href="#">Новинки</a></li>
+                <li><a href="#">Сливочное</a></li>
+                <li><a href="#">Щербеты</a></li>
+                <li><a href="#">Фруктовый лед</a></li>
+                <li><a href="#">Мелорин</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="#">О Компании</a>
+            </li>
           </ul>
         </nav>
         <div class="header-action">
@@ -41,43 +55,7 @@
             </form>
           </div>
           <div class="header-action-cart">
-            <a href="#">Пусто</a>
-            <div class="modal-form">
-              <ul class="cart-block">
-                <li class="clearfix">
-                  <div class="cart-block-image">
-                    <a href="#"><img src="img/product1_10x10.jpg" alt=""></a>
-                  </div>
-                  <div class="cart-block-name">
-                    <a href="#">Пломбир с апельсиновым джемом</a>
-                  </div>
-                  <div class="cart-block-cost">
-                    1,5 кг х <span>200 руб.</span>
-                  </div>
-                  <div class="cart-block-sum">
-                    300 руб.
-                  </div>
-                </li>
-                <li class="clearfix">
-                  <div class="cart-block-image">
-                    <a href="#"><img src="img/product2_10x10.jpg" alt=""></a>
-                  </div>
-                  <div class="cart-block-name">
-                    <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
-                  </div>
-                  <div class="cart-block-cost">
-                    1,5 кг х <span>300 руб.</span>
-                  </div>
-                  <div class="cart-block-sum">
-                    450 руб.
-                  </div>
-                </li>
-              </ul>
-              <div class="cart-block-action">
-                <span class="cart-table-total-cost">Итого: 750 руб.</span>
-                <a href="#" class="btn">Оформить заказ</a>
-              </div>
-            </div>
+            <a class="cart-empty" href="#">Пусто</a>
           </div>
         </div>
         <div class="header-contact">
@@ -85,7 +63,7 @@
           <span class="header-contact-tel">8 812 450-25-25</span>
         </div>
         <div class="slider">
-          <img src="img/slide.png" width="" height="" alt="Крем-брюле и пломбир с малиновым джемом">
+          <img src="img/slider-1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
           <p class="slider-text">
             Крем-брюле и пломбир с малиновым джемом
           </p>
@@ -125,7 +103,7 @@
         <div class="product-items clearfix">
           <div class="product-item">
             <a href="#" class="product-link">
-              <img class="product-img" src="img/product1.png">
+              <img class="product-img" src="img/product-1.png" width="267" height="267">
               <span class="product-label">Хит</span>
               <span class="product-price">310 р/кг</span>
             </a>
@@ -133,7 +111,7 @@
           </div>
           <div class="product-item">
             <a href="#" class="product-link">
-              <img class="product-img" src="img/product2.png">
+              <img class="product-img" src="img/product-2.png" width="267" height="267">
               <span class="product-label">Хит</span>
               <span class="product-price">380 р/кг</span>
             </a>
@@ -141,7 +119,7 @@
           </div>
           <div class="product-item">
             <a href="#" class="product-link">
-              <img class="product-img" src="img/product3.png">
+              <img class="product-img" src="img/product-3.png" width="267" height="267">
               <span class="product-label">Хит</span>
               <span class="product-price">355 р/кг</span>
             </a>
@@ -149,7 +127,7 @@
           </div>
           <div class="product-item">
             <a href="#" class="product-link">
-              <img class="product-img" src="img/product4.png">
+              <img class="product-img" src="img/product-4.png" width="267" height="267">
               <span class="product-label">Хит</span>
               <span class="product-price">415 р/кг</span>
             </a>
@@ -225,6 +203,13 @@
           <a href="#" class="btn">Форма обратной связи</a>
         </div>
       </div>
+      <form class="popap-form" action="index.html" method="post">
+        <span class="popap-name">Мы обязательно вам ответим!</span>
+        <input type="text" name="name" value="" placeholder="Как вас зовут?">
+        <input type="text" name="email" value="" placeholder="Ваша почта для ответа?">
+        <textarea name="comment" rows="5" cols="40">Напишите что-нибудь...</textarea>
+        <button type="submit" class="btn">Отправить</button>
+      </form>
     </main>
     <footer>
       <div class="container">
@@ -253,7 +238,7 @@
           </ul>
         </div>
         <div class="footer-copyright">
-          <img src="img/logo-copyright.png" alt="HTML Academy">
+          <img src="img/logo-copyright.png" width="108" height="38" alt="HTML Academy">
           <p>
             Сделано в <a href="https://htmlacademy.ru"></a> &copy; 2016
           </p>
