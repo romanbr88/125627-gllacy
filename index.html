@@ -19,74 +19,64 @@
         </nav>
         <div class="header-action">
           <div class="header-action-search">
-            <a href="#">Поиск</a>
-            <div class="modal-form">
+            <span>Поиск</span>
+            <form class="" action="index.html" method="post">
               <input type="text" name="search" value="" placeholder="Что ищем?">
-            </div>
+            </form>
           </div>
           <div class="header-action-login">
             <a href="#">Вход</a>
-            <div class="modal-form">
-              <form action="#" method="post">
-                <input type="text" name="email" value="" placeholder="Электронная почта">
-                <input type="password" name="password" value="" placeholder="Пароль">
-                <div class="form-action">
-                  <button class="btn" type="submit"></button>
-                  <p>
-                    <a href="#">Забыли пароль?</a>
-                  </p>
-                  <p>
-                    <a href="#">Новая регистрация</a>
-                  </p>
-                </div>
-              </form>
-            </div>
+            <form class="modal-form" action="#" method="post">
+              <input type="text" name="email" value="" placeholder="Электронная почта">
+              <input type="password" name="password" value="" placeholder="Пароль">
+              <div class="form-action">
+                <button class="btn" type="submit"></button>
+                <p>
+                  <a href="#">Забыли пароль?</a>
+                </p>
+                <p>
+                  <a href="#">Новая регистрация</a>
+                </p>
+              </div>
+            </form>
           </div>
           <div class="header-action-cart">
             <a href="#">Пусто</a>
             <div class="modal-form">
-              <table class="cart-table">
-                <tr>
-                  <td>
-                    x
-                  </td>
-                  <td>
-                    <img src="img/product1_10x10.jpg" alt="">
-                  </td>
-                  <td>
-                    Пломбир с апельсиновым джемом
-                  </td>
-                  <td>
-                    1,5 кг х <span class="cart-table-cost">200 руб.</span>
-                  </td>
-                  <td>
+              <ul class="cart-block">
+                <li class="clearfix">
+                  <div class="cart-block-image">
+                    <a href="#"><img src="img/product1_10x10.jpg" alt=""></a>
+                  </div>
+                  <div class="cart-block-name">
+                    <a href="#">Пломбир с апельсиновым джемом</a>
+                  </div>
+                  <div class="cart-block-cost">
+                    1,5 кг х <span>200 руб.</span>
+                  </div>
+                  <div class="cart-block-sum">
                     300 руб.
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    x
-                  </td>
-                  <td>
-                    <img src="img/product2_10x10.jpg" alt="">
-                  </td>
-                  <td>
-                    Клубничный пломбир с присыпкой из белого шоколада
-                  </td>
-                  <td>
-                    1,5 кг х <span class="cart-table-cost">300 руб.</span>
-                  </td>
-                  <td>
+                  </div>
+                </li>
+                <li class="clearfix">
+                  <div class="cart-block-image">
+                    <a href="#"><img src="img/product2_10x10.jpg" alt=""></a>
+                  </div>
+                  <div class="cart-block-name">
+                    <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  </div>
+                  <div class="cart-block-cost">
+                    1,5 кг х <span>300 руб.</span>
+                  </div>
+                  <div class="cart-block-sum">
                     450 руб.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="cart-table-total-cost" colspan="5">
-                    Итого: 750 руб.
-                  </td>
-                </tr>
-              </table>
-              <a href="#" class="btn">Оформить заказ</a>
+                  </div>
+                </li>
+              </ul>
+              <div class="cart-block-action">
+                <span class="cart-table-total-cost">Итого: 750 руб.</span>
+                <a href="#" class="btn">Оформить заказ</a>
+              </div>
             </div>
           </div>
         </div>
@@ -171,67 +161,53 @@
             Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес
           </p>
           <div class="features clearfix">
-            <div class="features-block-left">
-              <div class="features-text">
-                <img src="img/features-1.png">
-                <p>
-                  Все наше мороженое изготавливается на собственном<br>
-                  производстве, с использованием современного оборудования<br>
-                  и проверенных временем технологий.
-                </p>
-              </div>
-              <div class="features-text">
-                <img src="img/features-2.png">
-                <p>
-                  Для приготовления мороженого используются настоящие<br>
-                  сливки и молоко высочайшего качества. Все дополнительные<br>
-                  ингредиенты и добавки произведены из натурального,<br>
-                  экологически чистого сырья.
-                </p>
-              </div>
-            </div>
-            <div class="features-block-right">
-              <div class="features-text">
-                <img src="img/features-3.png">
-                <p>
-                  Закупка ингредиентов производится только у проверенных<br>
-                  фермерских хозяйств и компаний, с которыми нас связывает<br>
-                  долговременное сотрудничество.
-                </p>
-              </div>
-              <div class="features-text">
-                <img src="img/features-4.png">
-                <p>
-                  Доставка нашего мороженого до заказчиков осуществляется<br>
-                  в специальном термопаке, который не дает мороженому<br>
-                  растаять в пути и позволяет сохранить превосходный вкус.
-                </p>
-              </div>
-            </div>
+            <ul>
+              <li class="features-1">
+                Все наше мороженое изготавливается на собственном<br>
+                производстве, с использованием современного оборудования<br>
+                и проверенных временем технологий.
+              </li>
+              <li class="features-2">
+                Закупка ингредиентов производится только у проверенных<br>
+                фермерских хозяйств и компаний, с которыми нас связывает<br>
+                долговременное сотрудничество.
+              </li>
+              <li class="features-3">
+                Для приготовления мороженого используются настоящие<br>
+                сливки и молоко высочайшего качества. Все дополнительные<br>
+                ингредиенты и добавки произведены из натурального,<br>
+                экологически чистого сырья.
+              </li>
+              <li class="features-4">
+                Доставка нашего мороженого до заказчиков осуществляется<br>
+                в специальном термопаке, который не дает мороженому<br>
+                растаять в пути и позволяет сохранить превосходный вкус.
+              </li>
+            </ul>
           </div>
         </section>
         <section class="block-news clearfix">
-          <div class="main-block news">
-            <p class="news-header">
-              Новое в нашем блоге
-            </p>
+          <article class="main-block news">
+            <span class="news-header">Новое в нашем блоге</span>
             <a href="" class="news-name">
               10 способов сервировки<br>
               фруктовых щербетов к<br>
               столу
             </a>
-          </div>
-          <div class="main-block newsletter">
+          </article>
+          <article class="main-block newsletter">
             <form action="index.html" method="post">
               <p class="newsletter-text">
                 Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
                 всего самого вкусного, что у нас происходит. Обещаем не спамить
                 и не слать всякой не нужной ерунды. Честно =)
               </p>
-              <input type="text" name="email" value="" placeholder="Электронная почта">
-              <button type="submit" class="btn">Отправить</button>
+              <fieldset>
+                <input type="text" name="email" value="" placeholder="Электронная почта">
+                <button type="submit" class="btn">Отправить</button>
+              </fieldset>
             </form>
-          </div>
+          </article>
         </section>
       </div>
       <div class="maps">
