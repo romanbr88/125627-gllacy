@@ -402,6 +402,142 @@ input[type=password] {
   box-shadow: inset 0 2px 2px #942718;
 }
 
+.promo {
+  margin-bottom: 40px;
+}
+
+.promo-item-left, .promo-item-right {
+  min-height: 229px;
+  width: 560px;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.promo-item-left {
+  float: left;
+  background: #d3647f url('../img/bg-promo-1.jpg') no-repeat;
+}
+
+.promo-item-right {
+  float: right;
+  background: #61371f url('../img/bg-promo-2.jpg') no-repeat;
+}
+
+.product-items {
+  margin-bottom: 40px;
+}
+
+.product-item {
+  display: inline-block;
+  width: 267px;
+  vertical-align: top;
+  margin-right: 22px;
+}
+
+.product-item:last-child {
+  margin-right: 0;
+}
+
 .product-img {
   border-radius: 50%;
+}
+
+.about {
+  margin-bottom: 40px;
+  background: #f0e3ca url('../img/waffle.jpg') no-repeat;
+  border-radius: 15px;
+}
+
+.features {
+  list-style-type: none;
+  padding: 0;
+}
+
+.features li {
+  display: inline-block;
+  width: 540px;
+  vertical-align: top;
+  margin-right: 22px;
+  margin-bottom: 25px;
+}
+
+.features li:nth-child(2n) {
+  margin-right: 0;
+}
+
+.block-news {
+  margin-bottom: 40px;
+}
+
+.news, .newsletter {
+  min-height: 220px;
+  width: 560px;
+  border-radius: 15px;
+}
+
+.news {
+  float: left;
+  background: #fff url('../img/bg-blog.jpg') no-repeat;
+}
+
+.newsletter {
+  float: right;
+  background: #f8f7f4 url('../img/bg-subscribe.png') no-repeat;
+}
+
+.maps {
+  height: 430px;
+  position: relative;
+  background: #f7f1d9 url('../img/map.jpg') no-repeat;
+}
+
+.maps-contact {
+  width: 250px;
+  position: absolute;
+  padding: 30px 25px;
+  right: 27px;
+  top: 62px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 15px;
+}
+
+.popap-form {
+  display: none;
+}
+
+.footer-social {
+  float: left;
+  width: 290px;
+  margin-right: 10px;
+  font-size: 0;
+}
+
+.social-btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  border: 4px solid #c2cec7;
+  border-radius: 50%;
+}
+
+.footer-link {
+  float: left;
+  width: 500px;
+}
+
+.footer-link-left {
+  float: left;
+  list-style-type: none;
+}
+
+.footer-link-right {
+  float: right;
+  list-style-type: none;
+}
+
+.footer-copyright {
+  float: right;
+  width: 270px;
 }
