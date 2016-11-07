@@ -113,6 +113,13 @@
               <legend>Цена: <span class="start-price">100 руб.</span> - <span class="end-price">500 руб.</span></legend>
               <input class="price-range" type="text" name="start-price" value="">
               <input class="price-range" type="text" name="end-price" value="">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
+              </div>
             </fieldset>
             <fieldset class="filter-type filter-type-fatness">
               <legend>Жирность:</legend>
@@ -129,7 +136,7 @@
               <label><input type="checkbox" name="extender" value="syrup">сиропы</label>
               <label><input type="checkbox" name="extender" value="jam">джемы</label>
             </fieldset>
-            <button type="submit" class="btn filter-submit">Применить</button>
+            <button type="submit" class="filter-submit">Применить</button>
           </form>
         </div>
         <div class="product-items">
@@ -255,13 +262,13 @@
           </article>
         </div>
         <ul class="pagination">
-          <li><</li>
+          <li>&lt;</li>
           <li class="active">1</li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
           <li><a href="#">5</a></li>
-          <li><a href="#">></a></li>
+          <li><a href="#">&gt;</a></li>
         </ul>
       </div>
     </main>
