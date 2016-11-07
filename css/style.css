@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   line-height: 22px;
-  color: #323232;
+  color: #fff;
   font-weight: normal;
   font-family: "Roboto", sans-serif;
   background-color: #849d8f;
@@ -11,6 +11,7 @@ h1 {
   font-size: 35px;
   line-height: 41px;
   font-weight: bold;
+  margin: 10px 0 20px 0;
 }
 
 header, main, footer {
@@ -424,17 +425,20 @@ input[type=password] {
 }
 
 .product-items {
-  margin-bottom: 40px;
+  font-size: 0;
 }
 
 .product-item {
   display: inline-block;
   width: 267px;
+  font-size: 16px;
+  line-height: 22px;
   vertical-align: top;
-  margin-right: 22px;
+  margin-right: 26px;
+  margin-bottom: 40px;
 }
 
-.product-item:last-child {
+.product-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -442,10 +446,15 @@ input[type=password] {
   border-radius: 50%;
 }
 
+.product-action {
+  display: none;
+}
+
 .about {
   margin-bottom: 40px;
   background: #f0e3ca url('../img/waffle.jpg') no-repeat;
   border-radius: 15px;
+  color: #323232;
 }
 
 .features {
@@ -467,6 +476,7 @@ input[type=password] {
 
 .block-news {
   margin-bottom: 40px;
+  color: #323232;
 }
 
 .news, .newsletter {
@@ -502,6 +512,52 @@ input[type=password] {
 }
 
 .popap-form {
+  display: none;
+}
+
+.breadcrumbs, .pagination {
+  list-style-type: none;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 20px;
+}
+
+.pagination {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.pagination a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.pagination li {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  line-height: 18px;
+  margin-left: 10px;
+}
+
+.filter-type, .filter-submit {
+  float: left;
+  margin: 0 15px 40px 0;
+}
+
+.filter-type {
+  min-height: 36px;
+}
+
+input.price-range {
   display: none;
 }
 
