@@ -100,43 +100,47 @@
         <h1>Сливочное мороженое</h1>
         <div class="filter clearfix">
           <form class="filter-form" action="index.html" method="post">
-            <fieldset class="filter-type filter-type-sort">
-              <legend>Сортировка:</legend>
-              <select class="" name="sort">
-                <option value="popular">по популярности</option>
-                <option value="lowcost">сначала недорогие</option>
-                <option value="highcost">сначала до  рогие</option>
-                <option value="fatness">по жирности</option>
-              </select>
-            </fieldset>
-            <fieldset class="filter-type filter-type-price">
-              <legend>Цена: <span class="start-price">100 руб.</span> - <span class="end-price">500 руб.</span></legend>
-              <input class="price-range" type="text" name="start-price" value="">
-              <input class="price-range" type="text" name="end-price" value="">
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
+            <div class="filter-line">
+              <fieldset class="filter-type filter-type-sort">
+                <legend>Сортировка:</legend>
+                <select class="" name="sort">
+                  <option value="popular">по популярности</option>
+                  <option value="lowcost">сначала недорогие</option>
+                  <option value="highcost">сначала до  рогие</option>
+                  <option value="fatness">по жирности</option>
+                </select>
+              </fieldset>
+              <fieldset class="filter-type filter-type-price">
+                <legend>Цена: <span class="start-price">100 руб.</span> - <span class="end-price">500 руб.</span></legend>
+                <input class="price-range" type="text" name="start-price" value="">
+                <input class="price-range" type="text" name="end-price" value="">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle min-toggle"></div>
+                  <div class="toggle max-toggle"></div>
                 </div>
-                <div class="toggle min-toggle"></div>
-                <div class="toggle max-toggle"></div>
-              </div>
-            </fieldset>
-            <fieldset class="filter-type filter-type-fatness">
-              <legend>Жирность:</legend>
-              <label><input type="radio" name="fatness" value="0">0%</label>
-              <label><input type="radio" name="fatness" value="before-10" checked>до 10%</label>
-              <label><input type="radio" name="fatness" value="before-30">до 30%</label>
-              <label><input type="radio" name="fatness" value="after-30">выше 30%</label>
-            </fieldset>
-            <fieldset class="filter-type filter-type-extender">
-              <legend>Наполнители:</legend>
-              <label><input type="checkbox" name="extender" value="chocolate" checked>шоколадные</label>
-              <label><input type="checkbox" name="extender" value="sugar" checked>сахарные присыпки</label>
-              <label><input type="checkbox" name="extender" value="fruit">фрукты</label>
-              <label><input type="checkbox" name="extender" value="syrup">сиропы</label>
-              <label><input type="checkbox" name="extender" value="jam">джемы</label>
-            </fieldset>
-            <button type="submit" class="filter-submit">Применить</button>
+              </fieldset>
+              <fieldset class="filter-type filter-type-fatness">
+                <legend>Жирность:</legend>
+                <label><input type="radio" name="fatness" value="0">0%</label>
+                <label><input type="radio" name="fatness" value="before-10" checked>до 10%</label>
+                <label><input type="radio" name="fatness" value="before-30">до 30%</label>
+                <label><input type="radio" name="fatness" value="after-30">выше 30%</label>
+              </fieldset>
+            </div>
+            <div class="filter-line">
+              <fieldset class="filter-type filter-type-extender">
+                <legend>Наполнители:</legend>
+                <label><input type="checkbox" name="extender" value="chocolate" checked>шоколадные</label>
+                <label><input type="checkbox" name="extender" value="sugar" checked>сахарные присыпки</label>
+                <label><input type="checkbox" name="extender" value="fruit">фрукты</label>
+                <label><input type="checkbox" name="extender" value="syrup">сиропы</label>
+                <label><input type="checkbox" name="extender" value="jam">джемы</label>
+              </fieldset>
+              <button type="submit" class="filter-submit">Применить</button>
+            </div>
           </form>
         </div>
         <div class="product-items">
@@ -262,8 +266,8 @@
           </article>
         </div>
         <ul class="pagination">
-          <li>&lt;</li>
-          <li class="active">1</li>
+          <li class="pagination-disabled"><a>&lt;</a></li>
+          <li class="pagination-active"><a>1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">4</a></li>
