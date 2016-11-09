@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="inner-page">
     <header>
       <div class="container">
         <div class="header-topline clearfix">
@@ -111,7 +111,7 @@
                 </select>
               </fieldset>
               <fieldset class="filter-type filter-type-price">
-                <legend>Цена: <span class="start-price">100 руб.</span> - <span class="end-price">500 руб.</span></legend>
+                <legend>Цена: <span class="start-price">100 руб.</span> &mdash; <span class="end-price">500 руб.</span></legend>
                 <input class="price-range" type="text" name="start-price" value="">
                 <input class="price-range" type="text" name="end-price" value="">
                 <div class="range-controls">
@@ -124,20 +124,56 @@
               </fieldset>
               <fieldset class="filter-type filter-type-fatness">
                 <legend>Жирность:</legend>
-                <label><input type="radio" name="fatness" value="0">0%</label>
-                <label><input type="radio" name="fatness" value="before-10" checked>до 10%</label>
-                <label><input type="radio" name="fatness" value="before-30">до 30%</label>
-                <label><input type="radio" name="fatness" value="after-30">выше 30%</label>
+                <label class="filter-radio">
+                  <input type="radio" name="fatness" value="0">
+                  <span class="radio-indicator"></span>
+                  0%
+                </label>
+                <label class="filter-radio">
+                  <input type="radio" name="fatness" value="before-10" checked>
+                  <span class="radio-indicator"></span>
+                  до 10%
+                </label>
+                <label class="filter-radio">
+                  <input type="radio" name="fatness" value="before-30">
+                  <span class="radio-indicator"></span>
+                  до 30%
+                </label>
+                <label class="filter-radio">
+                  <input type="radio" name="fatness" value="after-30">
+                  <span class="radio-indicator"></span>
+                  выше 30%
+                </label>
               </fieldset>
             </div>
             <div class="filter-line">
               <fieldset class="filter-type filter-type-extender">
                 <legend>Наполнители:</legend>
-                <label><input type="checkbox" name="extender" value="chocolate" checked>шоколадные</label>
-                <label><input type="checkbox" name="extender" value="sugar" checked>сахарные присыпки</label>
-                <label><input type="checkbox" name="extender" value="fruit">фрукты</label>
-                <label><input type="checkbox" name="extender" value="syrup">сиропы</label>
-                <label><input type="checkbox" name="extender" value="jam">джемы</label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="extender" value="chocolate" checked>
+                  <span class="checkbox-indicator"></span>
+                  шоколадные
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="extender" value="sugar" checked>
+                  <span class="checkbox-indicator"></span>
+                  сахарные присыпки
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="extender" value="fruit">
+                  <span class="checkbox-indicator"></span>
+                  фрукты
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="extender" value="syrup">
+                  <span class="checkbox-indicator"></span>
+                  сиропы
+                </label>
+                <label class="filter-checkbox">
+                  <input type="checkbox" name="extender" value="jam">
+                  <span class="checkbox-indicator"></span>
+                  джемы
+                </label>
               </fieldset>
               <button type="submit" class="filter-submit">Применить</button>
             </div>
