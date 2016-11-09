@@ -18,8 +18,8 @@ h1 {
   margin: 0 0 45px 0;
 }
 
-header {
-  position: relative;
+.main-header {
+  margin-bottom: 578px;
 }
 
 input[type=text],
@@ -37,6 +37,26 @@ input[type=password] {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
+}
+
+.site-wrapper {
+  background-repeat: no-repeat;
+  background-position: top center;
+  transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.site-wrapper:before,
+.site-wrapper:after {
+  content: "";
+  visibility: hidden;
+}
+
+.site-wrapper:before {
+  background-image: url("../img/slide-2.png");
+}
+
+.site-wrapper:after {
+  background-image: url("../img/slide-3.png");
 }
 
 .clearfix::after {
@@ -316,20 +336,28 @@ input[type=password] {
   line-height: 16px;
   color: #fff;
   position: absolute;
-  top: 75px;
-  right: 28px;
+  top: 73px;
+  right: 26px;
 }
 
 .header-contact-tel {
   font-size: 22px;
   line-height: 24px;
   font-weight: bold;
+  display: block;
+  padding-top: 4px;
+}
+
+.slider-radio {
+  display: none;
 }
 
 .slider {
   text-align: center;
-  position: relative;
-  top: -17px;
+  position: absolute;
+  top: 83px;
+  left: 0;
+  width: 100%;
 }
 
 .slider .btn {
@@ -340,7 +368,6 @@ input[type=password] {
 
 .slider-item {
   display: none;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .slider-action {
@@ -363,29 +390,51 @@ input[type=password] {
   line-height: 44px;
 }
 
-.slider-active {
-  display: block;
-}
-
-.slider-control {
+.slider-controls {
   position: absolute;
-  bottom: 80px;
-  left: -40px;
-  list-style-type: none;
+  top: 480px;
+  left: 30px;
+  z-index: 20;
   font-size: 0;
 }
 
-.slider-control li {
+.slider-controls label {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #fff;
-  border-radius: 50%;
+  width: 17px;
+  height: 17px;
   margin-right: 8px;
+  vertical-align: top;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.active-slide {
-  background-color: #fff;
+#slide-1:checked ~ .site-wrapper #slide1,
+#slide-2:checked ~ .site-wrapper #slide2,
+#slide-3:checked ~ .site-wrapper #slide3 {
+  display: block;
+}
+
+#slide-1:checked ~ .site-wrapper {
+  background-color: #849d8f;
+  background-image: url("../img/slide-1.png");
+}
+
+#slide-2:checked ~ .site-wrapper {
+  background-color: #8996a6;
+  background-image: url("../img/slide-2.png");
+}
+
+#slide-3:checked ~ .site-wrapper {
+  background-color: #9d8b84;
+  background-image: url("../img/slide-3.png");
+}
+
+#slide-1:checked ~ .site-wrapper label[for="slide-1"],
+#slide-2:checked ~ .site-wrapper label[for="slide-2"],
+#slide-3:checked ~ .site-wrapper label[for="slide-3"] {
+  background-color: #ffffff;
 }
 
 .btn {
@@ -419,8 +468,9 @@ input[type=password] {
 }
 
 .promo-item-left, .promo-item-right {
-  min-height: 229px;
-  width: 560px;
+  min-height: 199px;
+  width: 520px;
+  padding: 15px 20px;
   border-radius: 15px;
   color: #fff;
 }
@@ -433,6 +483,23 @@ input[type=password] {
 .promo-item-right {
   float: right;
   background: #61371f url('../img/bg-promo-2.jpg') no-repeat;
+}
+
+.promo-name {
+  margin: 0 0 15px 0;
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+.promo-text {
+  margin: 15px 0 45px 0;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.promo-link {
+  float: right;
 }
 
 .product-items {
@@ -453,8 +520,42 @@ input[type=password] {
   margin-right: 0;
 }
 
+.product-link {
+  display: block;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.product-label {
+  display: block;
+  width: 61px;
+  height: 61px;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../img/hit.png');
+}
+
 .product-img {
   border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  position: absolute;
+  top: 208px;
+  left: 0;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: bold;
+  text-shadow: 0 1px 3px #313235;
+}
+
+.price-unit {
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .product-action {
@@ -653,19 +754,7 @@ input[type=password] {
 }
 
 .filter-checkbox:hover input[type="checkbox"] + .checkbox-indicator, .filter-radio:hover input[type="radio"] + .radio-indicator {
-  border-width: 2px;
-  width: 18px;
-  height: 18px;
-}
-
-.filter-checkbox:hover input[type="checkbox"]:checked + .checkbox-indicator::before {
-  top: 4px;
-  left: 2px;
-}
-
-.filter-radio:hover input[type="radio"]:checked + .radio-indicator::before {
-  top: 3px;
-  left: 3px;
+  box-shadow: inset 0 0 0 1px #fff;
 }
 
 .filter-checkbox input[type="checkbox"]:disabled + .checkbox-indicator, .filter-radio input[type="radio"]:disabled + .radio-indicator {
@@ -830,5 +919,5 @@ input.price-range {
 
 .footer-copyright {
   float: right;
-  width: 135px;
+  width: 140px;
 }
