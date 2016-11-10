@@ -65,6 +65,14 @@ input[type=password] {
   clear: both;
 }
 
+main a, footer a {
+  color: #fff;
+}
+
+main a:hover, main a:active, footer a:hover, footer a:active {
+  color: #ffbc9e;
+}
+
 .modal-form {
   display: none;
   position: absolute;
@@ -74,6 +82,10 @@ input[type=password] {
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   z-index: 1;
+}
+
+.modal-form a:hover, .modal-form a:active {
+  color: #e84d37;
 }
 
 .form-input {
@@ -119,7 +131,7 @@ input[type=password] {
 
 .main-menu-item > a {
   display: block;
-  padding: 7px 14px;
+  padding: 7px 14px 6px;
   border-radius: 15px;
   text-decoration: none;
   color: #fff;
@@ -224,7 +236,7 @@ input[type=password] {
   display: block;
   height: 32px;
   width: 32px;
-  background: #a2b8ac url('../img/search.png') center center no-repeat;
+  background: rgba(255, 255, 255, 0.2) url('../img/search.png') center center no-repeat;
   border-radius: 50%;
   vertical-align: top;
 }
@@ -254,7 +266,7 @@ input[type=password] {
   display: block;
   padding: 8px 0 8px 45px;
   text-decoration: none;
-  background-color: #a2b8ac;
+  background-color: rgba(255, 255, 255, 0.2);
   background-repeat: no-repeat;
   background-position: 16px center;
   border-radius: 16px;
@@ -551,6 +563,7 @@ input[type=password] {
   line-height: 45px;
   font-weight: bold;
   text-shadow: 0 1px 3px #313235;
+  color: #fff;
 }
 
 .price-unit {
@@ -622,6 +635,7 @@ input[type=password] {
   background: rgba(255, 255, 255, 0.98);
   color: #323232;
   border-radius: 15px;
+  z-index: 1;
 }
 
 .popap-form {
