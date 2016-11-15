@@ -131,7 +131,7 @@
               <a href="#" class="product-link">
                 <img class="product-img" src="img/product-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                 <span class="product-label">Хит</span>
-                <div class="product-price">310&#8381;<span class="price-unit">/кг</span></div>
+                <span class="product-price">310&#8381;<span class="price-unit">/кг</span></span>
                 <span class="product-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</span>
               </a>
             </article>
@@ -139,7 +139,7 @@
               <a href="#" class="product-link">
                 <img class="product-img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                 <span class="product-label">Хит</span>
-                <div class="product-price">380&#8381;<span class="price-unit">/кг</span></div>
+                <span class="product-price">380&#8381;<span class="price-unit">/кг</span></span>
                 <span class="product-name">Сливочно-кофейное с кусочками шоколада</span>
               </a>
             </article>
@@ -147,7 +147,7 @@
               <a href="#" class="product-link">
                 <img class="product-img" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                 <span class="product-label">Хит</span>
-                <div class="product-price">355&#8381;<span class="price-unit">/кг</span></div>
+                <span class="product-price">355&#8381;<span class="price-unit">/кг</span></span>
                 <span class="product-name">Сливочно-клубничное с присыпкой из белого шоколада</span>
               </a>
             </article>
@@ -155,7 +155,7 @@
               <a href="#" class="product-link">
                 <img class="product-img" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                 <span class="product-label">Хит</span>
-                <div class="product-price">415&#8381;<span class="price-unit">/кг</span></div>
+                <span class="product-price">415&#8381;<span class="price-unit">/кг</span></span>
                 <span class="product-name">Сливочное крем-брюле с карамельной подливкой</span>
               </a>
             </article>
@@ -225,17 +225,20 @@
                 <b>8 812 450-25-25</b><br>
                 (с 10 до 20 ежедневно)
               </p>
-              <a href="#" class="btn">Форма обратной связи</a>
+              <a href="#" class="popup-link btn">Форма обратной связи</a>
             </div>
           </div>
         </div>
-        <form class="popap-form" action="index.html" method="post">
-          <span class="popap-title">Мы обязательно вам ответим!</span>
-          <input class="form-input firstname" type="text" name="name" value="" placeholder="Как вас зовут?">
-          <input class="form-input email" type="text" name="email" value="" placeholder="Ваша почта для ответа?">
-          <textarea class="form-input comment" name="comment" rows="5" cols="40">Напишите что-нибудь...</textarea>
-          <button type="submit" class="btn">Отправить</button>
-        </form>
+        <div class="overlay">
+          <form class="popup-form" action="index.html" method="post">
+            <button class="popup-close" type="button" title="Закрыть">Закрыть</button>
+            <span class="popup-title">Мы обязательно вам ответим!</span>
+            <input class="form-input firstname" type="text" name="name" value="" placeholder="Как вас зовут?">
+            <input class="form-input email" type="text" name="email" value="" placeholder="Ваша почта для ответа?">
+            <textarea class="form-input comment" name="comment" rows="5" cols="40">Напишите что-нибудь...</textarea>
+            <button type="submit" class="btn">Отправить</button>
+          </form>
+        </div>
       </main>
       <footer>
         <div class="container clearfix">
@@ -266,12 +269,13 @@
           <div class="footer-copyright">
             <img src="img/logo-copyright.png" width="108" height="38" alt="HTML Academy">
             <p>
-              Сделано в <a href="https://htmlacademy.ru"></a> &copy; 2016
+              Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016
             </p>
           </div>
         </div>
       </footer>
     </div>
+    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Q0s466bVDoKd6FC1JmSRJvJPAp6kywI9&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex-map"></script>
   </body>
 </html>
