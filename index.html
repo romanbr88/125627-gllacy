@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -42,14 +42,23 @@
               <div class="header-action-search">
                 <span>Поиск</span>
                 <form class="modal-form" action="index.html" method="post">
-                  <input type="text" name="search" value="" placeholder="Что ищем?">
+                  <label class="form-label">
+                    <input class="form-input" type="text" name="search" value="">
+                    <span class="label-text">Что ищем?</span>
+                  </label>
                 </form>
               </div>
               <div class="header-action-login">
                 <a href="#">Вход</a>
                 <form class="modal-form" action="#" method="post">
-                  <input class="form-input" type="text" name="email" value="" placeholder="Электронная почта">
-                  <input class="form-input" type="password" name="password" value="" placeholder="Пароль">
+                  <label class="form-label">
+                    <input class="form-input login" type="text" name="login" value="">
+                    <span class="label-text">Электронная почта</span>
+                  </label>
+                  <label class="form-label">
+                    <input class="form-input password" type="password" name="password" value="">
+                    <span class="label-text">Пароль</span>
+                  </label>
                   <div class="form-login-action">
                     <button class="btn" type="submit">Войти</button>
                     <a class="lost-password" href="#">Забыли пароль?</a>
@@ -204,8 +213,11 @@
                   всего самого вкусного, что у нас происходит. Обещаем не спамить
                   и не слать всякой не нужной ерунды. Честно =)
                 </p>
-                <fieldset class="newsletter-form">
-                  <input type="text" class="subscribe-email" name="email" value="" placeholder="Электронная почта">
+                <fieldset class="newsletter-form clearfix">
+                  <label class="form-label">
+                    <input type="text" class="form-input subscribe-email" name="email" value="">
+                    <span class="label-text">Электронная почта</span>
+                  </label>
                   <button type="submit" class="btn">Отправить</button>
                 </fieldset>
               </form>
@@ -269,9 +281,18 @@
       <form class="popup-form" action="index.html" method="post">
         <button class="popup-close" type="button" title="Закрыть">Закрыть</button>
         <span class="popup-title">Мы обязательно вам ответим!</span>
-        <input class="form-input firstname" type="text" name="name" value="" placeholder="Как вас зовут?">
-        <input class="form-input email" type="text" name="email" value="" placeholder="Ваша почта для ответа?">
-        <textarea class="form-input comment" name="comment" rows="5" cols="40">Напишите что-нибудь...</textarea>
+        <label class="form-label">
+          <input class="form-input firstname" type="text" name="feedback-name" value="">
+          <span class="label-text">Как вас зовут?</span>
+        </label>
+        <label class="form-label">
+          <input class="form-input email" type="text" name="feedback-email" value="">
+          <span class="label-text">Ваша почта для ответа?</span>
+        </label>
+        <label class="form-label">
+          <textarea class="form-input comment" name="feedback-comment" rows="5" cols="40"></textarea>
+          <span class="label-text">Напишите что-нибудь...</span>
+        </label>
         <button type="submit" class="btn">Отправить</button>
       </form>
     </div>

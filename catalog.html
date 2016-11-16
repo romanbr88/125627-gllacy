@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900,500&subset=latin,cyrillic" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -38,23 +38,30 @@
             <div class="header-action">
               <div class="header-action-search">
                 <span>Поиск</span>
-                <div class="modal-form">
-                  <input type="text" name="search" value="" placeholder="Что ищем?">
-                </div>
+                <form class="modal-form" action="index.html" method="post">
+                  <label class="form-label">
+                    <input class="form-input" type="text" name="search" value="">
+                    <span class="label-text">Что ищем?</span>
+                  </label>
+                </form>
               </div>
               <div class="header-action-login">
                 <a href="#">Вход</a>
-                <div class="modal-form">
-                  <form action="#" method="post">
-                    <input class="form-input" type="text" name="email" value="" placeholder="Электронная почта">
-                    <input class="form-input" type="password" name="password" value="" placeholder="Пароль">
-                    <div class="form-login-action">
-                      <button class="btn" type="submit">Войти</button>
-                      <a class="lost-password" href="#">Забыли пароль?</a>
-                      <a class="new-registration" href="#">Новая регистрация</a>
-                    </div>
-                  </form>
-                </div>
+                <form class="modal-form" action="#" method="post">
+                  <label class="form-label">
+                    <input class="form-input login" type="text" name="login" value="">
+                    <span class="label-text">Электронная почта</span>
+                  </label>
+                  <label class="form-label">
+                    <input class="form-input password" type="password" name="password" value="">
+                    <span class="label-text">Пароль</span>
+                  </label>
+                  <div class="form-login-action">
+                    <button class="btn" type="submit">Войти</button>
+                    <a class="lost-password" href="#">Забыли пароль?</a>
+                    <a class="new-registration" href="#">Новая регистрация</a>
+                  </div>
+                </form>
               </div>
               <div class="header-action-cart">
                 <a class="cart-full" href="#">2 товара</a>
@@ -100,7 +107,7 @@
           </ul>
           <h1>Сливочное мороженое</h1>
           <div class="filter clearfix">
-            <form class="filter-form" action="index.html" method="post">
+            <form class="filter-form" action="filter.html" method="post">
               <div class="filter-line">
                 <fieldset class="filter-type filter-type-sort">
                   <legend>Сортировка:</legend>
