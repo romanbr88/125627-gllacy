@@ -297,6 +297,27 @@
       </form>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=Q0s466bVDoKd6FC1JmSRJvJPAp6kywI9&amp;width=100%25&amp;height=430&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true&amp;id=yandex-map"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+      var myMap,
+          myPlacemark;;
+
+      function init(){
+        myMap = new ymaps.Map("yandex-map", {
+          center: [59.93933091, 30.32949180],
+          zoom: 16
+        });
+
+        myPlacemark = new ymaps.Placemark([59.93863106, 30.32305450], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-mark.png',
+          iconImageSize: [218, 142],
+          iconImageOffset: [-40, -140]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
+    </script>
   </body>
 </html>
