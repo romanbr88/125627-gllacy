@@ -86,11 +86,12 @@ footer a:active {
   font-size: 18px;
   font-weight: bold;
   line-height: 24px;
-  text-decoration: none;
   vertical-align: top;
+  text-decoration: none;
   color: #fff;
   border: none;
   border-radius: 30px;
+  outline: none;
   background: #ed5a3d -webkit-linear-gradient(#f26843, #e74a35);
   background: #ed5a3d linear-gradient(#f26843, #e74a35);
   box-shadow: 0 2px 2px rgba(172, 16, 0, .64);
@@ -170,6 +171,14 @@ footer a:active {
   }
 }
 
+@-webkit-keyframes labelup {
+  100% {
+    top: -15px;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+
 @keyframes labelup {
   100% {
     top: -15px;
@@ -183,58 +192,6 @@ footer a:active {
   font-size: 11px;
   line-height: 13px;
   color: #999;
-}
-
-/* Ошибка в форме */
-.form-error {
-  -webkit-animation: shake .6s;
-          animation: shake .6s;
-}
-
-@-webkit-keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-  }
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translateX(-10px);
-            transform: translateX(-10px);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-  }
 }
 
 /* Модальное окно */
@@ -1060,6 +1017,8 @@ footer a:active {
   margin-top: -220px;
   margin-left: -237px;
   padding: 17px 22px 25px 22px;
+  -webkit-animation: showpopup .5s;
+          animation: showpopup .5s;
   border-radius: 10px;
   background-color: #f8f7f4;
 }
@@ -1128,6 +1087,80 @@ footer a:active {
 
 .popup-form .btn {
   float: right;
+}
+
+@-webkit-keyframes showpopup {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes showpopup {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+/* Ошибка в форме */
+.form-error {
+  -webkit-animation: shake .6s;
+          animation: shake .6s;
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
 }
 
 /* Хлебные крошки*/
@@ -1309,14 +1342,15 @@ footer a:active {
   vertical-align: top;
   color: #fff;
   border: none;
-  outline: none;
   border-radius: 18px;
+  outline: none;
   background-color: rgba(255, 255, 255, .2);
 }
 
 .filter-submit {
   padding: 7px 26px;
-  border: 2px solid #fbfcfb;}
+  border: 2px solid #fbfcfb;
+}
 
 .filter-submit:hover {
   color: #323232;
@@ -1427,18 +1461,18 @@ footer .container::before {
   height: 32px;
   margin-right: 10px;
   vertical-align: top;
+  opacity: .8;
   border: 4px solid #c2cec7;
   border-color: rgba(255, 255, 255, .5);
   border-radius: 50%;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  opacity: .8;
 }
 
 .social-btn:hover,
 .social-btn:active {
-  border-color: rgba(255, 255, 255, .7);
   opacity: 1;
+  border-color: rgba(255, 255, 255, .7);
 }
 
 .social-btn:active {
